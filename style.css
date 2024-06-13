@@ -1,0 +1,11 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 1rem;
+}
+
+.grid div {
+  width: 600px;
+  height: 400px;
+  /* border: 1px solid black; */
+}
