@@ -1,3 +1,5 @@
+// categoryWithMostApps
+
 function categoryWithMostApps() {
   const x = [
     "FAMILY",
@@ -33,6 +35,7 @@ function categoryWithMostApps() {
 
 categoryWithMostApps();
 
+// plotFreeVsPaidApps
 function plotFreeVsPaidApps() {
   const x = ["Free", "Paid"];
   const y = [8884, 802];
@@ -59,6 +62,7 @@ function plotFreeVsPaidApps() {
 
 plotFreeVsPaidApps();
 
+//plotAppsInEachCategory
 function plotAppsInEachCategory() {
   const categoryName = [
     "Art and Design",
@@ -101,11 +105,20 @@ function plotAppsInEachCategory() {
     title: "Number of Apps in Each Category",
     xaxis: { title: "Category Name" },
     yaxis: { title: "Number of Apps" },
+    margin: {
+      l: 100,
+      r: 60,
+      t: 60,
+      b: 150,
+      pad: 10,
+    },
   };
   Plotly.newPlot("appsInEachCategory", [trace], layout);
 }
 
 plotAppsInEachCategory();
+
+//plotFamilyCategoryInstalls
 
 function plotFamilyCategoryInstalls() {
   const trace = {
@@ -120,52 +133,11 @@ function plotFamilyCategoryInstalls() {
   };
 
   Plotly.newPlot("familyCategoryInstalls", [trace], layout);
-
-  /*
-  // Data set 1
-  var trace1 = {
-    x: [1, 2, 3, 4, 5],
-    y: [10, 15, 13, 17, 22],
-    mode: "lines+markers",
-    type: "scatter",
-    name: "Data Set 1",
-  };
-
-  // Data set 2
-  var trace2 = {
-    x: [1, 2, 3, 4, 5],
-    y: [16, 5, 11, 9, 15],
-    mode: "lines+markers",
-    type: "scatter",
-    name: "Data Set 2",
-  };
-
-  // Data set 3
-  var trace3 = {
-    x: [1, 2, 3, 4, 5],
-    y: [12, 9, 15, 12, 10],
-    mode: "lines+markers",
-    type: "scatter",
-    name: "Data Set 3",
-  };
-
-  // Combine all data sets
-  var data = [trace1, trace2, trace3];
-
-  // Layout settings
-  var layout = {
-    title: "My Plotly Plot with Three Data Sets",
-    xaxis: {
-      title: "X Axis Label",
-    },
-    yaxis: {
-      title: "Y Axis Label",
-    },
-  };*/
 }
 
 plotFamilyCategoryInstalls();
 
+//plotTop10LeastInstalls
 function plotTop10LeastInstalls() {
   const nameOfLeastInstall = [
     "Command & Conquer: Rivals",
@@ -232,7 +204,6 @@ function plotTop10MostInstalls() {
 plotTop10MostInstalls();
 
 //plotContentRatingCount
-
 function plotContentRatingCount() {
   const contentRating = [
     "Mature 7+",
@@ -298,6 +269,13 @@ function plotCategoryAppCount() {
     title: "Category and Total App Count",
     xaxis: { title: "Category" },
     yaxis: { title: "Total App Count" },
+    margin: {
+      l: 100,
+      r: 60,
+      t: 60,
+      b: 200,
+      pad: 10,
+    },
   };
   Plotly.newPlot("categoryAppCount", [trace], layout);
 }
@@ -327,6 +305,13 @@ function plotTop10AppsByRating() {
     title: "Top 10 Apps by Rating",
     xaxis: { title: "App Name" },
     yaxis: { title: "Rating" },
+    margin: {
+      l: 100,
+      r: 60,
+      t: 60,
+      b: 200,
+      pad: 10,
+    },
   };
   Plotly.newPlot("top10AppsByRating", [trace], layout);
 }
@@ -373,6 +358,13 @@ function plotCategoryMaxRatingApps() {
     title: "Category with the Most Apps with Maximum Rating",
     xaxis: { title: "Category" },
     yaxis: { title: "App Count" },
+    margin: {
+      l: 100,
+      r: 60,
+      t: 60,
+      b: 200,
+      pad: 10,
+    },
   };
   Plotly.newPlot("categoryMaxRatingApps", [trace], layout);
 }
