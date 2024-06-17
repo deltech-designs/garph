@@ -1,5 +1,4 @@
 // categoryWithMostApps
-
 function categoryWithMostApps() {
   const x = [
     "FAMILY",
@@ -119,7 +118,6 @@ function plotAppsInEachCategory() {
 plotAppsInEachCategory();
 
 //plotFamilyCategoryInstalls
-
 function plotFamilyCategoryInstalls() {
   const trace = {
     x: ["Family"],
@@ -423,11 +421,12 @@ plotHighestRatingAppInCategory();
 
 // plotAppsBySize
 function plotAppsBySize() {
-  const totalSpecificSizeApps = [8411];
-  const totalVariableSizeApps = [1226];
+  const totalSpecificSizeApps = [8411, 1226];
+  const totalVariableSizeApps = ["Size", "App Count"];
   const trace = {
     x: totalSpecificSizeApps,
     y: totalVariableSizeApps,
+    mode: "bar",
     type: "bar",
   };
   const layout = {
